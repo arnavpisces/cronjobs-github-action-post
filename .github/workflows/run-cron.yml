@@ -18,7 +18,7 @@ jobs:
       with:
         python-version: 3.x
     - name: Generate documentation
-      run: pip install pycco && pycco -p -d docs/source/python/ **/*.py
+      run: pip install pycco && find . -name "*.py" -execdir pycco {} -d docs/source/python/ \;
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
