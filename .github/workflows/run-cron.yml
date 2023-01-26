@@ -1,0 +1,5 @@
+name: Daily Contributions Email
+on:
+  schedule:
+    - cron: "0 0 * * *" # runs every day at 00:00
+jobs:
