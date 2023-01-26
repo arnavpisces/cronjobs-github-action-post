@@ -21,8 +21,8 @@ jobs:
       run: pip install pycco && find . -name "*.py" -execdir pycco {} -d docs/source/python/ \;
     - name: Commit and push changes
       run: |
-        git config --local user.email "arnavpisces@github.com"
-        git config --local user.name "Arnav Kumar"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git add docs/source/python/
         git commit -m "cron: documentation generated"
-        git push
+        git push origin HEAD:master
